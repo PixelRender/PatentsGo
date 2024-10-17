@@ -1,0 +1,170 @@
+/* Define CSS Variables */
+:root {
+    --primary-color: #004080;
+    --secondary-color: #ff6600;
+    --hover-color: #e65c00;
+    --text-color: #4f4c4c;
+    --header-text-color: #fff;
+    --background-color: #e5e5e5;
+    --font-color: #333;
+    --hero-text-color: #454545;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--header-text-color);
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+section h2 {
+    font-size: 2.2rem;
+    font-weight: 900;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--header-text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--hero-text-color); /* Improved contrast */
+}
+
+.hero h2 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Call to Action Button */
+.cta-btn {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: var(--header-text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: var(--hover-color);
+}
+
+/* Services & Blog Sections */
+.services, .blog {
+    padding: 20px;
+    text-align: center;
+}
+
+.service, article {
+    background-color: var(--background-color);
+    margin: 15px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+/* Main content area should take up all available space */
+main {
+    flex-grow: 1;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color);
+    color: var(--header-text-color);
+    padding: 10px 0;
+    text-align: center;
+    margin-top: auto; /* Ensures it stays at the bottom */
+    width: 100%; /* Full width to align with the page */
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-btn {
+        padding: 8px 16px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
